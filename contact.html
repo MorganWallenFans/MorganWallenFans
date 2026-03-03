@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Support – Morgan Wallen Circle</title>
+  <script src="https://cdn.tailwindcss.com/"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&amp;family=Inter&amp;display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    h1, h2 { font-family: 'Playfair Display', serif; }
+    .typing::after {
+      content: '|';
+      animation: blink 1s infinite;
+    }
+    @keyframes blink {
+      0%, 100% { opacity: 0; }
+      50% { opacity: 1; }
+    }
+  </style>
+</head>
+<body class="bg-gray-950 text-white min-h-screen flex flex-col justify-center items-center px-6 py-16">
+
+  <div class="max-w-2xl w-full text-center">
+    <h1 class="text-4xl md:text-5xl font-bold mb-6">Official Support</h1>
+    <p class="text-lg text-gray-300 mb-10">
+      You're moments away from connecting with Morgan Wallen’s trusted management team.
+    </p>
+
+    <!-- Auto Message Simulation -->
+    <div class="bg-gray-900 border border-gray-700 rounded-xl p-6 shadow-xl mb-8 text-left">
+      <p class="text-green-400 font-semibold mb-2">Team Morgan:</p>
+      <p class="text-gray-300 typing" id="auto-message"></p>
+    </div>
+
+    <a href="https://t.me/mmwallenn009" class="inline-block bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-full text-white text-lg transition">
+      Message on Telegram
+    </a>
+
+    <p class="mt-6 text-sm text-gray-400">Only message the Available username: <span class="text-white font-mono">Morgan Wallen Management</span></p>
+  </div>
+
+  <footer class="text-gray-500 mt-20 text-sm text-center">
+    &copy; 2020-2026 Morgan Wallen Official Circle. All rights reserved.
+  </footer>
+
+  <!-- Auto typing script -->
+  <script>
+    const messageEl = document.getElementById('auto-message');
+    const fullText = "Hi there! 👋 We're thrilled you're joining Wallen's private fan circle. If you need help with crypto payment, account setup, or have questions, we're right here. Just tap the Telegram button to begin.";
+    let index = 0;
+
+    function typeMessage() {
+      if (index < fullText.length) {
+        messageEl.textContent += fullText.charAt(index);
+        index++;
+        setTimeout(typeMessage, 35);
+      }
+    }
+
+    window.onload = typeMessage;
+  </script>
+
+</body>
+
+</html>
